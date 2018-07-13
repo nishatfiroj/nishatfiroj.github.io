@@ -1,18 +1,18 @@
 body {
     background-color: gray;
 }
-/*h1 {
-    color: blue;
+h1 {
+    color: black;
     font-family: verdana;
-    font-size: 300%;
+    font-size: 200%;
 }
 p {
     color: red;
-    font-family: courier;
-    font-size: 160%;
+    font-family: verdana;
+    font-size: 130%;
     border: 1px solid red;
     padding: 30px;
-}*/
+}
 
 #header {
 	color: white;

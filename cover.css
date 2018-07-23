@@ -28,15 +28,6 @@ h3 {
   font-size: 30px; 
 }
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #eee;
-  border: .05rem solid #eee;
-}
 
 
 /*

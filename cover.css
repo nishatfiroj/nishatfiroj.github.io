@@ -45,7 +45,7 @@ body {
   display: flex;
   color: #fff;
   text-shadow: 0 .05rem .1rem rgba(255, 255, 255, .5);
-  box-shadow: inset 0 0 5rem rgba(79, 8, 35, .5);
+  /*box-shadow: inset 0 0 5rem rgba(79, 8, 35, .5);*/
 }
 
 .cover-container {

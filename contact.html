@@ -1,57 +1,111 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
 
-    <title>Nishat Firoj</title>
+  <title>Nishat Firoj</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="contact.css" rel="stylesheet">
-  </head>
+  <!-- Custom styles for this template -->
+  <link href="contact.css" rel="stylesheet">
 
-  <body class="text-center">
+  <script>
+    $(document).ready(function(){ 
+      $('#characterLeft').text('140 characters left');
+      $('#message').keydown(function () {
+        var max = 140;
+        var len = $(this).val().length;
+        if (len >= max) {
+          $('#characterLeft').text('You have reached the limit');
+          $('#characterLeft').addClass('red');
+          $('#btnSubmit').addClass('disabled');            
+        } 
+        else {
+          var ch = max - len;
+          $('#characterLeft').text(ch + ' characters left');
+          $('#btnSubmit').removeClass('disabled');
+          $('#characterLeft').removeClass('red');            
+        }
+      });    
+    });
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="art.html">Art</a>
-            <a class="nav-link" href="design.html">Design</a>
-            <a class="nav-link active" href="contact.html">Contact</a>
-          </nav>
-        </div>
-      </header>
-      
-      <div class="container">
-        <h1>So.</h1>
-        <h2 class = "text-muted" style="font-size: 30px">Have I caught your attention yet?</h2>
-        <h3>Reach out.</h3>
-        <!-- <h4>asdf</h4> -->
+  </script>
+</head>
+
+<body class="text-center">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="art.html">Art</a>
+          <a class="nav-link" href="design.html">Design</a>
+          <a class="nav-link active" href="contact.html">Contact</a>
+        </nav>
       </div>
-  
+    </header>
 
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          
-        </div>
-      </footer>
+    <div style="padding-top: 5rem; padding-bottom: 1rem;">
+      <img src="dinoboi2.jpg" alt="dino boi" style="width:50%;">
     </div>
+
+    <div>
+      <h1>So.</h1>
+      <h2 class = "text-muted" style="font-size: 30px; padding-bottom: 1rem;">Have I caught your attention yet?</h2>
+      <h3 style="padding-bottom: 15px">See more of my work here:</h3>
+      <ul>nishat.firoj@gmail.com</ul>
+      <ul>https://www.linkedin.com/in/nishatfiroj</ul>
+      <ul>https://github.com/nishatfiroj</ul>
+
+    </div>
+
+    <div class="container">
+      <div class="form-area">  
+        <form role="form">
+          <br style="clear:both">
+          <h3 style="padding-bottom: 15px">And contact me here:</h3>
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>                    
+          </div>
+          
+          <button type="button" id="submit" name="submit" class="btn btn-default pull-right">Submit Form</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+
+      </div>
+    </footer>
+  </div>
 
 
     <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
-    <script src="popper.min.js"></script>
-    <script src="bootstrap.min.js"></script>
-  </body>
-</html>
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
+      <script src="popper.min.js"></script>
+      <script src="bootstrap.min.js"></script>
+    </body>
+    </html>
